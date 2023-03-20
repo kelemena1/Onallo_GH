@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+<svg style="margin-left:auto; margin-right:auto; display:block;" width="1000" height="1000">
+   <circle cx="450" cy="450" r="450" stroke="black" stroke-width="4" fill="white" />
+   <rect  id="ora" x="450" y="225"  width="6" height="300" style="fill:red;stroke-width:3" />
+   <rect  id="perc" x="450" y="175" width="5"  height="350" style="fill:pink;stroke-width:3"transform="rotate()" /> 
+   <rect  id="ora" x="450" y="850"  width="5" height="50" style="fill:black;stroke-width:3" />
+   <rect  id="ora" x="450" y="0"  width="5" height="50" style="fill:black;stroke-width:3" />
+   <rect  id="ora" x="850" y="450"  width="50" height="5" style="fill:black;stroke-width:3" />
+   <rect  id="ora" x="0" y="450"  width="50" height="5" style="fill:black;stroke-width:3" />
+</svg> 
+<hr>
+<label for="ora">Óra:</label>
+<input type="number" name="ora" id="hour">
+<br>
+<br>
+<label for="perc">Perc:</label>
+<input id="min" type="number" name="perc" id="">
+<input type="button" onclick="beallit()" value="Mutat!">
+<script>
+
+    function beallit()
+    {
+        var h = document.getElementById("hour").value;
+        var m = document.getElementById("min").value;
+        var oramutato = document.getElementById("ora");
+        var percmutato = document.getElementById("perc");
+
+
+        oramutato.setAttribute("transform",`rotate(${h*30},450,450)`)
+        percmutato.setAttribute("transform",`rotate(${m*6},450,450)`)
+
+    }
+
+
+</script>
+</body>
+</html>
